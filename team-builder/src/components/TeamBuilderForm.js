@@ -10,15 +10,19 @@ const TeamBuilderForm = props => {
        setForm({ ...form, [event.target.name]: event.target.value });  
          
      }
+    
+    
     const submitForm = event => {
         event.preventDefault();
+        if (form.name !== "") { 
         const newForm = {
             ...form,
-            id:Math.floor(Math.random(100)*1000000)
+            id: Math.floor(Math.random(100) * 1000000)
         }
         console.log(newForm);
         props.addMember(newForm);
         setForm({ name: "", picture: "", position: "" });
+    }
     }
     return (
       <form onSubmit={submitForm}>
