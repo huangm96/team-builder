@@ -7,16 +7,37 @@ import TeamBuilderForm from './components/TeamBuilderForm'
 
 function App() {
   const [members, setMembers] = useState(data);
+  
   console.log(data)
   const addMember = member => {
     setMembers([...members, member])
     
   }
+  const memberToEdit = (member) => {
+    console.log(member)
+   }
+
+const removeButton = (id) => {
+  let newMemberList = members.filter((member) => {
+    return member.id !== id;
+  });
+  setMembers(newMemberList);
+};
+  
   return (
     <div className="App">
       <h1>Football Team Builder</h1>
-      <TeamBuilderForm addMember={addMember}/>
-      <Teammember key={members.id} members={members}/>
+      <TeamBuilderForm
+        key={members.id}
+        members={members}
+        addMember={addMember}
+        
+      />
+      <Teammember
+        members={members}
+        removeButton={removeButton}
+        memberToEdit={memberToEdit}
+      />
     </div>
   );
 }

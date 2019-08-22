@@ -24,6 +24,8 @@ const TeamBuilderForm = props => {
         setForm({ name: "", picture: "", position: "" });
     }
     }
+
+    
     return (
       <form onSubmit={submitForm}>
         <label htmlFor="name">name : </label>
@@ -57,8 +59,10 @@ const TeamBuilderForm = props => {
         <br />
         <br />
         <button type="submit">Submit</button>
-      </form>
+        </form>
+        
     );
 }
+
 
 export default TeamBuilderForm;

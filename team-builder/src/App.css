@@ -17,5 +17,13 @@
 img{
   width:100%;
   border-radius: 50%;
+ 
 }
 
+.name{
+  padding: 10px 0 0 0;
+   border-top: 1px dotted black;
+}
+button{
+  margin: 5px 10px;
+}
