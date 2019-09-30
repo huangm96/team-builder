@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+.Teammember{
+  display:flex;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+ margin: 50px 0;
+}
+
+.memberCard{
+  width:25%;
+  margin: 10px 5px;
+  padding: 10px 10px;
+  border: 2px solid orange;
+}
+img{
+  width:100%;
+  border-radius: 50%;
+ 
+}
+
+.name{
+  padding: 10px 0 0 0;
+   border-top: 1px dotted black;
+}
+button{
+  margin: 5px 10px;
+}
